@@ -1,5 +1,5 @@
 name: Output
-on: issues
+on: [opened, edited, closed]
 
 jobs:
   issue:
