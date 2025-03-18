@@ -25,6 +25,9 @@ jobs:
       - name: Print
         run : echo "Second Workflow"
 
+      - name: Get code
+        uses: actions/checkout@v4
+
       - name: NPM install
         run: npm install
 
@@ -37,6 +40,9 @@ jobs:
     steps: 
       - name: Print
         run : echo "Third Workflow"
+
+      - name: Get code
+        uses: actions/checkout@v4
 
       - name: NPM install
         run: npm install
