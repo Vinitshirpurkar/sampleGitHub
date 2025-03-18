@@ -9,7 +9,7 @@ jobs:
         run : echo "First Workflow"
 
       - name: NPM install
-        run: npm ci
+        run: npm install
 
       - name: Lint 
         run: npm run lint
