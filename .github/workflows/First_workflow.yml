@@ -35,7 +35,7 @@ jobs:
         run : echo "Third Workflow"
 
       - name: NPM install
-        run: npm ci
+        run: npm install
 
       - name: Build 
         run: npm run build
