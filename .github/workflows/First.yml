@@ -22,7 +22,7 @@ jobs:
 
       - name: Get Code Repo
         uses: actions/checkout@v4
-        
+
       - name: Install Dependencis
         run: npm install
 
@@ -34,6 +34,16 @@ jobs:
         with:
           name: dist
           path: dist
+  thirdjob:
+    need: secondjob
+    runs-on: ubuntu-latest
+    steps: 
+      - name: download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+      - name: checking
+        run: ls -lt
 
       - name: Closed
         run: echo "bye"
