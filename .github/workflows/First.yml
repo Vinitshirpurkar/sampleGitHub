@@ -1,0 +1,23 @@
+name: Sample
+on: push
+
+jobs: 
+  myjob: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: First step
+        run: echo "Hello"
+      
+      - name: Second step
+        uses: actions/checkout@v4
+
+      - name: Third step
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 18
+
+      - name: Fourth step
+        run: npm install
+
+      - name: Fifth step
+        run: echo "bye"
