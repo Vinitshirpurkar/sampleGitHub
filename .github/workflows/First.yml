@@ -19,6 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: firstjob
     steps:
+
+      - name: Get Code Repo
+        uses: actions/checkout@v4
+        
       - name: Install Dependencis
         run: npm install
 
